@@ -1,20 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Email Spam Classifier</title>
+    <meta charset="UTF-8">
+    <title>CyberGuard</title>
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <h2>Email / SMS Spam Classifier</h2>
+
+<div class="container">
+    <h1>CyberGuard</h1>
+    <p class="subtitle">AI-Powered Message Protection</p>
 
     <form method="post">
-        <textarea name="message" rows="6" cols="60"
-                  placeholder="Enter message here...">{{ message }}</textarea>
-        <br><br>
-        <button type="submit">Predict</button>
+        <textarea
+            name="message"
+            placeholder="Paste email or SMS text here..."
+        >{{ message }}</textarea>
+
+        <button type="submit">Analyze Message</button>
     </form>
 
     {% if result %}
-        <h3>Result: {{ result }}</h3>
+        <div class="result {{ 'spam' if 'SPAM' in result else 'ham' }}">
+            {{ result }}
+        </div>
     {% endif %}
+
+    <div class="footer">
+        © CyberGuard • NLP & Machine Learning
+    </div>
+</div>
+
 </body>
 </html>
