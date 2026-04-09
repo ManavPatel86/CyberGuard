@@ -9,15 +9,15 @@
 
 <div class="container">
     <h1>CyberGuard</h1>
-    <p class="subtitle">AI-Powered Message Protection</p>
+    <p class="subtitle">AI-Powered Mail Protection</p>
 
     <form method="post">
         <textarea
             name="message"
-            placeholder="Paste email or SMS text here..."
+            placeholder="Paste your email content here..."
         >{{ message }}</textarea>
 
-        <button type="submit">Analyze Message</button>
+        <button type="submit">Analyze Mail</button>
     </form>
 
     {% if result %}
@@ -27,7 +27,7 @@
     {% endif %}
 
     <div class="footer">
-        © CyberGuard • NLP & Machine Learning
+        © CyberGuard • AI & Machine Learning
     </div>
 </div>
 
